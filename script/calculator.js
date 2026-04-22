@@ -48,11 +48,8 @@ function Calculate () {
     const expression = display.value
 
     if (!expression || expression === '0') return
-
-    
     const result = new Function(`return ${expression}`)()
    
-
     if (!isFinite(result)) {
       display.value = 'Error'
       return
