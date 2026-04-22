@@ -56,3 +56,8 @@ button {
 button:active {
   filter: brightness(1.5);
 }
+
+button {
+  background-color: #333333;
+  color: white;
+}
