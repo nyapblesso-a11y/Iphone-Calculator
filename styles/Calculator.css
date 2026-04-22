@@ -52,7 +52,6 @@ button {
   transition: brightness 0.2s;
 }
 
-
 button:active {
   filter: brightness(1.5);
 }
