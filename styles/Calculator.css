@@ -41,3 +41,13 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
+
+button {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: brightness 0.2s;
+}
