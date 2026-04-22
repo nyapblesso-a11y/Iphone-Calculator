@@ -25,3 +25,12 @@ function appendToDisplay(input) {
 
   display.value += input;
 }
+
+
+function deleteInput() {
+  if (display.value.length > 1 && display.value !== 'Error') {
+    display.value = display.value.slice(0, -1);
+  } else {
+    display.value = '0';
+  }
+}
