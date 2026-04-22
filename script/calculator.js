@@ -48,8 +48,10 @@ function Calculate () {
     const expression = display.value
 
     if (!expression || expression === '0') return
+
+    // eslint-disable-next-line no-new-func
     const result = new Function(`return ${expression}`)()
-   
+
     if (!isFinite(result)) {
       display.value = 'Error'
       return
@@ -65,6 +67,5 @@ function Calculate () {
     setTimeout(clearDisplay, 1500)
   }
 }
-
 
 console.log(appendToDisplay, deleteInput, applyPercentage, Calculate)
