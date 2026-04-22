@@ -1,13 +1,13 @@
-const display = document.getElementById("display");
+const display = document.getElementById('display');
 function clearDisplay() {
-  display.value = "0";
+  display.value = '0';
 }
 
 function appendToDisplay(input) {
   const lastChar = display.value.slice(-1);
-  const operators = ["+", "-", "*", "/"];
+  const operators = ['+', '-', '*', '/'];
 
-  if (display.value === "0" && !operators.includes(input) && input !== ".") {
+  if (display.value === '0' && !operators.includes(input) && input !== '.') {
     display.value = input;
     return;
   }
@@ -17,7 +17,7 @@ function appendToDisplay(input) {
     return;
   }
 
-  if (input === ".") {
+  if (input === '.') {
     const parts = display.value.split(/[\+\-\*\/]/);
     const currentNumber = parts[parts.length - 1];
     if (currentNumber.includes(".")) return;
