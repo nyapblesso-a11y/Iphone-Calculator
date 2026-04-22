@@ -51,6 +51,7 @@ function Calculate () {
 
     
     const result = new Function(`return ${expression}`)()
+   
 
     if (!isFinite(result)) {
       display.value = 'Error'
@@ -67,5 +68,6 @@ function Calculate () {
     setTimeout(clearDisplay, 1500)
   }
 }
+
 
 console.log(appendToDisplay, deleteInput, applyPercentage, Calculate)
