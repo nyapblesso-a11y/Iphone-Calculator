@@ -68,3 +68,4 @@ function Calculate () {
   }
 }
 
+console.log(appendToDisplay, deleteInput, applyPercentage, Calculate)
