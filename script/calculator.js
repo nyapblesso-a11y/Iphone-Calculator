@@ -34,3 +34,36 @@ function deleteInput() {
     display.value = '0';
   }
 }
+
+function applyPercentage() {
+  const currentValue = parseFloat(display.value);
+  
+  if (isNaN(currentValue)) return;
+  const result = currentValue / 100;
+  display.value = parseFloat(result.toFixed(8)).toString();
+}
+
+function Calculate() {
+  try {
+    let expression = display.value;
+
+    if (!expression || expression === '0') return;
+
+    let result = new Function(`return ${expression}`)();
+
+    if (!isFinite(result)) {
+      display.value = 'Error';
+      return;
+    }
+
+    if (result.toString().includes('.')) {
+      display.value = parseFloat(result.toFixed(8));
+    } else {
+      display.value = result;
+    }
+
+  } catch (error) {
+    display.value = 'Error';
+    setTimeout(clearDisplay, 1500);
+  }
+}
